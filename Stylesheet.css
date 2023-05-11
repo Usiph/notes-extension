@@ -10,20 +10,20 @@
 body {
   background-color: #121212;
   border: #bb86fc 1px solid;
-  min-width: 660px;
+  min-width: 400px;
   min-height: 500px;
 }
 
 .wrapper {
-  margin: 50px;
+  margin: 40px;
   display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fill, 265px);
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, 150px);
 }
 
 .wrapper li {
   margin-top: 15px;
-  height: 250px;
+  height: 160px;
   list-style: none;
   background-color: #1e1e1e;
   padding: 15px 20px 20px;
@@ -31,7 +31,7 @@ body {
 
 }
 
-.wrapper li:hover {
+.note:hover {
 
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -56,6 +56,9 @@ header {
   flex-direction: column;
   cursor: pointer;
 }
+.add-box:hover {
+  background-color: #bb86fc;
+}
 
 
 .note {
@@ -66,26 +69,25 @@ header {
 
 .note span {
   color: #b3b3b3;
-  ;
   display: block;
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .note p {
   color: #e3e3e3;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bolder;
 }
 
 .bottom-content {
-  padding-top: f10px;
+  padding-top: 5px;
   border-top: 2px solid #bb86fc;
 }
 
 .bottom-content span {
   color: #bb86fc;
-  font-size: 17px;
+  font-size: 13px;
 }
 
 
@@ -108,7 +110,7 @@ header {
   left: 50%;
   z-index: 3;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   justify-content: center;
   transform: translate(-50%, -50%) scale(0.95);
 }
@@ -133,7 +135,7 @@ header {
 .popup .content {
   border-radius: 10%;
   background: #121212;
-  width: calc(100% - 15px);
+  width: calc(100% - 25px);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   color: #bb86fc;
 }
@@ -144,7 +146,7 @@ header {
 }
 
 .content header p {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -159,23 +161,23 @@ header {
 }
 
 .content form .row {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 form .row label {
-  font-size: 18px;
+  font-size: 15px;
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 }
 
 form :where(input, textarea) {
   border-radius: 10px;
   background-color: #1e1e1e;
   color: #e3e3e3;
-  height: 50px;
+  height: 40px;
   width: 100%;
   outline: none;
-  font-size: 17px;
+  font-size: 12px;
   padding: 0 15px;
   border: 1px solid #bb86fc;
 }
@@ -185,7 +187,7 @@ form :where(input, textarea):focus {
 }
 
 form .row textarea {
-  height: 150px;
+  height: 90px;
   resize: none;
   padding: 8px 15px;
 }
@@ -193,38 +195,13 @@ form .row textarea {
 form button {
   border-radius: 10px;
   width: 100%;
-  height: 50px;
+  height: 30px;
   color: #121212;
   outline: none;
   border: none;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 13px;
   background: #bb86fc;
-}
-
-@media (max-width: 600px) {
-  .wrapper {
-    margin: 15px;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, 100%);
-  }
-
-  .popup-box .popup {
-    max-width: calc(100% - 15px);
-  }
-
-  .bottom-content .settings i {
-    font-size: 17px;
-  }
-}
-
-.contact {
-
-  position: absolute;
-  top: 5px;
-  left: 50px;
-  font-weight: bolder;
-  text-decoration: none;
 }
 
 .clear {
@@ -254,4 +231,22 @@ form button {
   top: 5px;
   left: 50px;
 
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #bb86fc;
+  border-radius: 0px;
+  border: 1px #121212 solid;
+}
+*::-webkit-scrollbar-track {
+  background: #121212;
+}
+/* Firefox */
+* {
+  scrollbar-width: 7px;
+  scrollbar-color: #bb86fc #121212;
+}
+
+/* Chrome*/
+*::-webkit-scrollbar {
+  width: 5px;
 }
