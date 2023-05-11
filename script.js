@@ -78,5 +78,11 @@ addBtn.addEventListener("click", e => {
         closeIcon.click();
     }
 });
-
-
+function addPurp() {
+    document.getElementById('addIcon').src ='assets/addPurp.svg'
+ }
+addBox.addEventListener('mouseout', addPurp)
+function addWhite() {
+    document.getElementById('addIcon').src ='assets/addWhite.svg'
+ }
+addBox.addEventListener('mouseover', addWhite)
